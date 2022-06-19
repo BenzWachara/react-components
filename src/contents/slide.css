@@ -1,0 +1,78 @@
+
+.image-poster{
+    display: flex;
+}
+.image-poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.div-poster {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: blue;
+}
+
+.slide {
+    transform: scale(0.7);
+    transition: transform 300ms;
+    opacity: 0.3;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.activeSlide {
+    min-width: 200px;
+    max-width: 400px;
+    transform: scale(0.85);
+    opacity: 1;
+    z-index: 10;
+    transition: transform 300ms;
+    transition: 0.5s;
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px 0px #ffffff, 0px 0px 26px 3px #af50f9;
+    cursor: pointer;
+}
+
+.slide .activeSlide img{
+    width: 500px;
+}
+
+.slick-slider{
+    margin: auto;
+    max-width: 1000px;
+}
+
+.slick-dots li button:before{
+    opacity: 0.5!important;
+    color: white!important;
+    font-size: 12px!important;
+}
+
+.slick-dots li.slick-active button:before{
+    opacity: 1!important;
+    color: rgb(189, 139, 255)!important;
+    font-size: 15px!important;
+}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before{
+    color: rgb(189, 139, 255)!important;
+}
+
+.slick-initialized .slick-slide {
+    display: flex!important;
+    justify-content: center;
+}
+.slide img{
+    max-width: 280px;
+}
+@media screen and (max-width: 480px) {
+    button.slick-arrow.slick-prev{
+        display: none!important;
+    }
+    button.slick-arrow.slick-next{
+        display: none!important;
+    }
+  }
+

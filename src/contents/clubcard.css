@@ -1,0 +1,324 @@
+.body-content{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 5px 5px 5px;
+  background-color: white;
+  border-radius: 35px;
+}
+
+.flex-content{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    min-height: 700px;
+    border-radius: 40px;
+    border-radius: 23px;
+    border: 1.5px solid #eb005f;
+    margin: 20px;
+}
+
+.content-block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content-card{
+    width: 60%;
+    padding: 10px;
+}
+
+.show-card{
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.content-card h2{
+  font-size: 2rem;
+  color: #eb005f;
+}
+
+.size-text{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.description-card {
+  border-radius: 20px;
+  padding: 10px 50px 60px 50px;
+  color: black;
+}
+
+.description-card p{
+  color :#420a67;
+}
+
+.btn-more-info{
+    padding: 15px 35px 15px 35px;
+    border-radius: 10px;
+    border-style: none;
+    color: #fff;
+    background-image: linear-gradient(to right, #420a67 , #eb005f);
+    font-size: 16px;
+}
+
+.show-card{
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.play-card{
+    position: absolute;
+    width: 280px;
+    top:0;
+    left:0;
+    overflow:visible;
+}
+
+.size-text{
+  font-size: 3rem;
+  display: flex;
+  background-image: linear-gradient(90deg, #420a67 , #eb005f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.c1{
+    opacity: 0;
+    animation-name: fadeInCard;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-animation: 400ms ease 1800ms normal forwards 1 fadeInCard;
+}
+
+.c1{
+    position: relative;
+    margin: auto;
+    background: white;
+    width: 281px;
+    height: 421px;
+    border-radius: 20px;
+    box-shadow: rgb(0 0 0 / 50%) 0px 8px 15px;
+    
+  }
+
+.c2{
+    display: flex;
+    width: 281px;
+    height: 421px;
+    border-radius: 20px;
+}
+
+.c2::before {
+    border-bottom: 3px solid #4dd8e7;
+    border-left: 3px solid #4dd8e7;
+    width: 0px;
+    height: 0px;
+    content: "";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 0px 0px 0px 10px;
+    margin: 0px 0px 21px 25px;
+    box-sizing: border-box;
+}
+  
+.c2::after {
+    border-top: 3px solid #4dd8e7;
+    border-right: 3px solid #4dd8e7;
+    width: 0px;
+    height: 0px;
+    content: "";
+    top: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 0px 10px 0px 0px;
+    margin: 25px 21px 0px 0px;
+}
+
+.card-pic2{
+    opacity: 0;
+    animation-name: slide-card-pic2;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-animation: 1000ms ease 3300ms normal forwards 1 slide-card-pic2;
+  
+  }
+
+
+@media screen and (max-width: 600px) {
+    .content-card{
+      width: 100%;
+      text-align: center;
+    }
+    .show-card{
+      width: 100%;
+      text-align: center;
+    }
+
+    .body-content{
+      margin: 5px 5px 5px 5px;
+    }
+
+    .content-block{
+      /*margin-left: 0px;
+      margin-right: 0px;*/
+    }
+    .body-content{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .footer-dev{
+      text-align: center;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      right: 0;
+    }
+    
+    .navbar-item, .content-card p {
+      display: none;
+    }
+  
+    p{
+      font-size: 12px;
+    }
+    .size-text{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  
+    .bgOverlay{
+      display: none;
+    }
+  }
+
+  @keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+    transform: translateX(-100px);
+	}
+	100% {
+		opacity: 1;
+    transform: translateX(0);
+	}
+}
+
+.c2::before, .c2::after {
+  opacity:0;
+  animation-name: lineStretch;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: 1500ms ease 4000ms normal forwards 1 lineStretch;
+}
+
+@keyframes lineStretch {
+  from {
+    opacity:1;
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    opacity:1;
+    width: 200px;
+    height: 288px;
+  }
+}
+.c1{
+  opacity: 0;
+  animation-name: fadeInCard;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: 400ms ease 1800ms normal forwards 1 fadeInCard;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity:0;
+    transform: scale(130%);
+  }
+  to {
+    opacity:1;
+    transform: scale(100%);
+  }
+}
+
+.card-pic1{
+  opacity: 0;
+  animation-name: slide-card-pic1;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: 1000ms ease 3300ms normal forwards 1 slide-card-pic1;
+
+}
+@keyframes slide-card-pic1 {
+  0% {
+		opacity: 0;
+    transform: translatex(-110px) translatey(30px);
+	}
+	100% {
+		opacity: 1;
+    transform: translatex(0px) translatey(0px);
+	}
+}
+
+.card-pic2{
+  opacity: 0;
+  animation-name: slide-card-pic2;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: 1000ms ease 3300ms normal forwards 1 slide-card-pic2;
+
+}
+@keyframes slide-card-pic2 {
+  0% {
+		opacity: 1;
+    transform: translatex(110px) translatey(-30px);
+    
+	}
+	100% {
+		opacity: 1;
+    transform: translatex(0px) translatey(0px);
+	}
+}
+
+.tage-front{
+  opacity: 0;
+  animation-name: tage-front-pic1;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: 500ms ease 2500ms normal forwards 1 tage-front-pic1;
+}
+
+@keyframes tage-front-pic1 {
+  0% {
+		opacity: 1;
+    transform: scale(150%);
+	}
+	100% {
+		opacity: 1;
+    transform: scale(100%);
+	}
+}
+
+.card-text{
+  opacity: 0;
+  animation-name: card-text-pic1;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: 300ms ease 5600ms normal forwards 1 card-text-pic1;
+}
+
+@keyframes card-text-pic1 {
+  0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
